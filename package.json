@@ -1,0 +1,35 @@
+{
+  "name": "uncreatecreated",
+  "version": "1.0.0",
+  "description": "This is a website that contains information scraped from Uncreate. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mugendiz/uncreateCreatedScraped.git"
+  },
+  "keywords": [
+    "the",
+    "ultimate",
+    "buyer’s",
+    "guide",
+    "for",
+    "men"
+  ],
+  "author": "Andrew Zoka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mugendiz/uncreateCreatedScraped/issues"
+  },
+  "homepage": "https://github.com/mugendiz/uncreateCreatedScraped#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^5.0.12",
+    "request": "^2.85.0"
+  }
+}
