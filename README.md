@@ -7,8 +7,8 @@ __Activate__
 - `npm install`
 - `node server.js`
 
-##or
+***or***
 
 __Visit__
 
-`insert_heroku_link`
+https://uncreate-created.herokuapp.com/
