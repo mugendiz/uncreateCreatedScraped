@@ -1,5 +1,5 @@
 
 module.exports = {
-  Note: require("./Note"),
-  User: require("./Headline")
+  Note: require("./note"),
+  User: require("./article")
 };

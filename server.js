@@ -12,12 +12,13 @@ var app = express();
 
 var db = require("./models");
 
-var Note = require("../models/Note.js");
-var Article = require("../models/Article.js");
+var note = require("./models/note.js");
+var Article = require("./models/article.js");
+var axios = require("axios");
 
-
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static("views"));
+// Initializing express
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static("public"));
 
 // MongoDB
 mongoose.Promise = Promise;
@@ -27,7 +28,7 @@ mongoose.connect("mongodb://localhost/populatedb", {
 
 // Routes
 // =============================================================
-require("./app/routes/api-routes.js")(app);
+require("./controllers/article")(app);
 
 // The "unique" rule in the User model's schema will prevent duplicate users from being added to the server
 db.Headline.create({ name: "Gadget" })
@@ -45,6 +46,7 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, {
   useMongoClient: true
 });
-
-// Initiate the listener.
-app.listen(port);
+// Start the server
+app.listen(PORT, function() {
+  console.log("App running on port " + PORT + "!");
+});

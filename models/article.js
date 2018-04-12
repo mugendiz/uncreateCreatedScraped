@@ -7,10 +7,10 @@ var ArticleSchema = new Schema({
     type: String,
     unique: true
   },
-  notes: [{
+  notes: {
     type: Schema.Types.ObjectId,
     ref: "Note"
-  }],
+  },
   link: {
     type: String,
     required: true
@@ -19,10 +19,9 @@ var ArticleSchema = new Schema({
     type: Boolean,
     default: false
   }
-
 });
 
 // This creates our model from the above schema, using mongoose's model method
 var Article = mongoose.model("Article", ArticleSchema);
 
-module.exports = Article;
+module.exports = ("./controllers");

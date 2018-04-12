@@ -15,21 +15,22 @@
 
 <!-- Bootstrap card -->
 
-  <div class="card" style="width: 18rem;">
+<div class="container">
+    <div class="card" style="width: 18rem;">
 
     <img class="card-img-top" src=".buy" alt="Card image cap">
     <div class="card-body">
       <h5 class="card-title">Article</h5>
-      {{#each article}}
-          <p><span class="label">link:</span> {{this.link}}</p>
-          <p><span class="label">Article:</span> {{this.article}}</p>
-          <p><span class="label">Buy Link:</span> {{this.site}}</p>
+
+          <p><span class="label">link:</span></p>
+          <p><span class="label">Article:</span> </p>
+          <p><span class="label">Buy Link:</span> </p>
           <button data-id="{{this.id}}" class="buy">Buy This</button>
-          <a href="/{{this.link}}" class="action-1-url" class="btn btn-primary">Buy this item</a>
-      {{/each}}
+          <a href="/" class="action-1-url" class="btn btn-primary">Buy this item</a>
 
     </div>
   </div>
+</div>
 
 </body>
 
